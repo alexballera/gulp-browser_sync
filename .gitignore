@@ -1,0 +1,11 @@
+node_modules
+bower_components
+dist
+*.tmp.*
+.sass-cache
+.idea
+bower_components
+app/styles/styles.css
+logs
+*.log
+npm-debug.log*
