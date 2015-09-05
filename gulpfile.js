@@ -46,10 +46,11 @@ gulp.task('html', function() {
     conditionals: true,
     spare:true
   };
- 
+
   return gulp.src(globs.html)
     .pipe(minifyHTML(opts))
-    .pipe(gulp.dest(globs.folder[6]));
+    .pipe(gulp.dest(globs.folder[6]))
+    .pipe(notify({ message: 'HTML task complete' }));
 });
 
 // Styles
@@ -110,4 +111,3 @@ gulp.task('watch', function() {
 // Default task
 gulp.task('default', ['html', 'serve', 'styles', 'scripts', 'images', 'watch', 'clean'], function() {
 });
-
