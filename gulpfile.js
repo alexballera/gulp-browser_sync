@@ -102,6 +102,7 @@ gulp.task('watch', function() {
   gulp.watch(globs.image, ['images']);
   gulp.watch(globs.html, ['html']);
   gulp.watch(globs.html).on('change', reload);
+  gulp.watch(globs.image).on('change', reload);
   gulp.watch(globs.folder[0] + '/*').on('change', reload);
   gulp.watch(globs.folder[1] + '/*').on('change', reload);
   gulp.watch(globs.folder[2] + '/*').on('change', reload);
@@ -109,5 +110,5 @@ gulp.task('watch', function() {
 });
 
 // Default task
-gulp.task('default', ['html', 'serve', 'styles', 'scripts', 'images', 'watch', 'clean'], function() {
+gulp.task('default', ['serve', 'watch', 'clean'], function() {
 });
